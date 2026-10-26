@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Koleksi - Museum Ganesya</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail {
+            padding: 65px 55px;
+            background-color: #f5eee4;
+        }
+        .detail-container {
+            max-width: 1050px;
+            margin: auto;
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+        .detail-image {
+            width: 45%;
+        }
+        .detail-image img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 7px;
+            box-shadow: 0 5px 18px rgba(70,45,25,.12);
+        }
+        .detail-content {
+            width: 55%;
+        }
+        .detail-content span {
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #866044;
+            font-weight: 600;
+        }
+        .detail-content h2 {
+            margin: 5px 0 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: 34px;
+            color: #4a3426;
+        }
+        .detail-content p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #675346;
+        }
+        .metadata {
+            width: 100%;
+            margin-top: 22px;
+            border-collapse: collapse;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+        .metadata td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #d8c6b3;
+            color: #675346;
+        }
+        .metadata td:first-child {
+            width: 35%;
+            font-weight: 500;
+            color: #4a3426;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            border: 1px solid #6d452c;
+            border-radius: 4px;
+            color: #6d452c;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            transition: .3s;
+        }
+        .back-button:hover {
+            background-color: #6d452c;
+            color: white;
+        }
+        @media (max-width: 800px) {
+            .detail {
+                padding: 45px 25px;
+            }
+            .detail-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .detail-image,
+            .detail-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <h1>Museum Ganesya</h1>
+        </div>
+        <nav>
+            <a href="index.html">
+                Home
+            </a>
+            <a href="index.html#visi-misi">
+                Visi &amp; Misi
+            </a>
+            <a href="katalog.html">
+                Koleksi
+            </a>
+            <a href="index.html#tentang">
+                Tentang Museum
+            </a>
+            <a href="https://maps.google.com/?q=Museum+Ganesya+Malang"
+               target="_blank">
+                Lokasi Museum
+            </a>
+        </nav>
+    </header>
+    <!-- DETAIL KOLEKSI -->
+    <section class="detail">
+        <div class="section-title">
+            <div class="hiasan">
+                ✦
+            </div>
+            <h2>
+                Detail Koleksi
+            </h2>
+            <p>
+                Informasi mengenai koleksi Museum Ganesya.
+            </p>
+        </div>
+        <div class="detail-container">
+            <!-- FOTO -->
+            <div class="detail-image">
+                <img id="fotoKoleksi"
+                     src="gambar/artefak 1.jpg"
+                     alt="Koleksi Museum Ganesya">
+            </div>
+            <!-- INFORMASI -->
+            <div class="detail-content">
+                <span>
+                    KOLEKSI MUSEUM
+                </span>
+                <h2 id="namaKoleksi">
+                    Artefak Sejarah
+                </h2>
+                <p id="deskripsiKoleksi">
+                    Koleksi Museum Ganesya yang menjadi bagian
+                    dari kekayaan budaya dan sejarah.
+                </p>
+                <!-- TABEL METADATA -->
+                <table class="metadata">
+                    <tr>
+                        <td>
+                            Nama Koleksi
+                        </td>
+                        <td id="namaTabel">
+                            Artefak Sejarah
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Jenis Koleksi
+                        </td>
+
+                        <td id="jenisKoleksi">
+                            Artefak
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Kategori
+                        </td>
+                        <td id="kategoriKoleksi">
+                            Sejarah dan Budaya
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Lokasi
+                        </td>
+                        <td>
+                            Museum Ganesya
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Keterangan
+                        </td>
+                        <td id="keteranganKoleksi">
+                            Benda koleksi yang memiliki nilai
+                            sejarah dan budaya.
+                        </td>
+                    </tr>
+                </table>
+                <!-- KEMBALI -->
+                <a href="katalog.html"
+                   class="back-button">
+                    ← Kembali ke Katalog
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Museum Ganesya |
+            Siti Aisyah Artha Metia - 250911724155
+        </p>
+    </footer>
+    <!-- JAVASCRIPT DETAIL -->
+    <script>
+        const koleksi = {
+            /* =====================
+               ARTEFAK
+            ====================== */
+            artefak1: {
+                nama: "Arca Figur Manusia",
+                gambar: "gambar/artefak 1.jpg",
+                jenis: "Artefak",
+                kategori: "Sejarah dan Budaya",
+                deskripsi: "Koleksi arca berbentuk figur manusia yang menjadi bagian dari peninggalan sejarah dan budaya.",
+                keterangan: "Arca figur manusia yang menjadi bagian dari koleksi Museum Ganesya."
+            },
+            artefak2: {
+                nama: "Koleksi Perhiasan dan Kalung",
+                gambar: "gambar/artefak 2.jpg",
+                jenis: "Artefak",
+                kategori: "Sejarah dan Budaya",
+                deskripsi: "Koleksi perhiasan dan kalung yang menunjukkan bentuk seni serta budaya masyarakat pada masa lalu.",
+                keterangan: "Koleksi perhiasan dan kalung yang menjadi bagian dari koleksi budaya museum."
+            },
+            artefak3: {
+                nama: "Arca dan Miniatur Bangunan",
+                gambar: "gambar/artefak 3.jpg",
+                jenis: "Artefak",
+                kategori: "Sejarah dan Budaya",
+                deskripsi: "Koleksi arca dan miniatur yang menggambarkan bentuk peninggalan budaya masa lampau.",
+                keterangan: "Koleksi arca dan miniatur bangunan yang menjadi bagian dari peninggalan budaya."
+            },
+            artefak4: {
+                nama: "Celengan Babi",
+                gambar: "gambar/artefak 4.jpg",
+                jenis: "Artefak",
+                kategori: "Sejarah dan Budaya",
+                deskripsi: "Koleksi wadah berbentuk babi yang menjadi salah satu benda peninggalan dalam koleksi museum.",
+                keterangan: "Benda berbentuk celengan yang menjadi bagian dari koleksi peninggalan budaya."
+            },
+            artefak5: {
+                nama: "Koleksi Gerabah dan Wadah",
+                gambar: "gambar/artefak 5.jpg",
+                jenis: "Artefak",
+                kategori: "Sejarah dan Budaya",
+                deskripsi: "Berbagai bentuk gerabah dan wadah yang memperlihatkan penggunaan benda dalam kehidupan masyarakat masa lalu.",
+                keterangan: "Koleksi gerabah dan wadah yang menjadi bagian dari benda budaya museum."
+            },
+            artefak6: {
+                nama: "Guci dan Wadah Kuno",
+                gambar: "gambar/artefak 6.jpg",
+                jenis: "Artefak",
+                kategori: "Sejarah dan Budaya",
+                deskripsi: "Koleksi guci dan wadah kuno yang menjadi bagian dari benda budaya dan sejarah museum.",
+                keterangan: "Koleksi guci dan wadah kuno yang menjadi bagian dari peninggalan budaya."
+            },
+            /* =====================
+               TOPENG
+            ====================== */
+            topeng1: {
+                nama: "Topeng Mahesa Sura",
+                gambar: "gambar/topeng 1.jpg",
+                jenis: "Topeng",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Salah satu koleksi topeng yang menggambarkan karakter dalam tradisi seni pertunjukan Nusantara.",
+                keterangan: "Topeng Mahesa Sura sebagai bagian dari koleksi seni tradisional Museum Ganesya."
+            },
+            topeng2: {
+                nama: "Topeng Menak",
+                gambar: "gambar/topeng 2.jpg",
+                jenis: "Topeng",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Koleksi topeng tradisional yang menjadi bagian dari kekayaan seni dan budaya Indonesia.",
+                keterangan: "Topeng Menak yang menjadi bagian dari koleksi topeng tradisional museum."
+            },
+            topeng3: {
+                nama: "Topeng Jaya Samba",
+                gambar: "gambar/topeng 3.jpg",
+                jenis: "Topeng",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Topeng dengan karakter khas yang menjadi bagian dari koleksi seni tradisional museum.",
+                keterangan: "Topeng Jaya Samba sebagai bagian dari koleksi seni dan budaya museum."
+            },
+            topeng4: {
+                nama: "Topeng Tangsen",
+                gambar: "gambar/topeng 4.jpg",
+                jenis: "Topeng",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Koleksi topeng tradisional yang memperlihatkan karakter dan bentuk seni budaya Nusantara.",
+                keterangan: "Topeng Tangsen yang menjadi bagian dari koleksi topeng Museum Ganesya."
+            },
+            topeng5: {
+                nama: "Topeng Pintèn",
+                gambar: "gambar/topeng 5.jpg",
+                jenis: "Topeng",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Salah satu koleksi topeng tradisional yang memiliki bentuk dan karakter khas.",
+                keterangan: "Topeng Pintèn sebagai bagian dari koleksi seni tradisional museum."
+            },
+            topeng6: {
+                nama: "Topeng Demit",
+                gambar: "gambar/topeng 6.jpg",
+                jenis: "Topeng",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Koleksi topeng dengan karakter khas yang memperlihatkan keberagaman seni tradisional.",
+                keterangan: "Topeng Demit yang menjadi bagian dari koleksi topeng Museum Ganesya."
+            },
+            /* =====================
+               WAYANG
+            ====================== */
+            wayang1: {
+                nama: "Wayang Golek Panakawan",
+                gambar: "gambar/wayang 1.jpg",
+                jenis: "Wayang",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Koleksi wayang golek yang menampilkan tokoh Panakawan dalam tradisi seni pertunjukan.",
+                keterangan: "Wayang Golek Panakawan sebagai bagian dari koleksi seni pertunjukan."
+            },
+            wayang2: {
+                nama: "Punokawan Cirebon",
+                gambar: "gambar/wayang 2.jpg",
+                jenis: "Wayang",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Koleksi tokoh Punokawan yang memperlihatkan keberagaman tradisi wayang di Indonesia.",
+                keterangan: "Punokawan Cirebon yang menjadi bagian dari koleksi wayang museum."
+            },
+            wayang3: {
+                nama: "Wayang Thegel",
+                gambar: "gambar/wayang 3.jpg",
+                jenis: "Wayang",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Koleksi wayang tradisional yang menjadi bagian dari kekayaan seni pertunjukan Nusantara.",
+                keterangan: "Wayang Thegel sebagai bagian dari koleksi wayang tradisional Museum Ganesya."
+            },
+            wayang4: {
+                nama: "Wayang Golek Tokoh Wayang",
+                gambar: "gambar/wayang 4.jpg",
+                jenis: "Wayang",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Koleksi wayang golek dengan bentuk tokoh yang memperlihatkan karakter seni tradisional.",
+                keterangan: "Wayang golek dengan bentuk tokoh sebagai bagian dari koleksi seni museum."
+            },
+            wayang5: {
+                nama: "Koleksi Wayang Tradisional",
+                gambar: "gambar/wayang 5.jpg",
+                jenis: "Wayang",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Berbagai bentuk wayang tradisional yang menjadi bagian dari warisan budaya Indonesia.",
+                keterangan: "Koleksi wayang tradisional yang menjadi bagian dari kekayaan budaya museum."
+            },
+            wayang6: {
+                nama: "Wayang Boneka Tiga Dimensi",
+                gambar: "gambar/wayang 6.jpg",
+                jenis: "Wayang",
+                kategori: "Seni dan Budaya",
+                deskripsi: "Koleksi wayang berbentuk tiga dimensi yang menunjukkan variasi bentuk dalam seni pertunjukan.",
+                keterangan: "Wayang boneka tiga dimensi sebagai bagian dari koleksi seni tradisional."
+            }
+        };
+        /* =====================
+           AMBIL DATA DARI URL
+        ====================== */
+        const parameter =
+            new URLSearchParams(window.location.search);
+        const item =
+            parameter.get("item");
+        if (item && koleksi[item]) {
+            const data = koleksi[item];
+            document.getElementById("fotoKoleksi").src =
+                data.gambar;
+            document.getElementById("fotoKoleksi").alt =
+                data.nama;
+            document.getElementById("namaKoleksi").textContent =
+                data.nama;
+            document.getElementById("namaTabel").textContent =
+                data.nama;
+            document.getElementById("jenisKoleksi").textContent =
+                data.jenis;
+            document.getElementById("kategoriKoleksi").textContent =
+                data.kategori;
+            document.getElementById("deskripsiKoleksi").textContent =
+                data.deskripsi;
+            document.getElementById("keteranganKoleksi").textContent =
+                data.keterangan;
+        }
+    </script>
+</body>
+</html>

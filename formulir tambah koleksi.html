@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Museum Ganesya</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: #f6f0e5;
+            font-family: Arial, sans-serif;
+            color: #3e281e;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 35px;
+            background: #fffdf8;
+            border: 1px solid #e5d9c8;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(62, 40, 30, 0.12);
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #c49a55;
+            font-size: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 27px;
+        }
+
+        .subtitle {
+            margin: 10px 0 25px;
+            color: #786e64;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d8cbb9;
+            border-radius: 7px;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #c49a55;
+            box-shadow: 0 0 0 3px rgba(196, 154, 85, 0.15);
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 7px;
+            background: #5a3827;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3e281e;
+        }
+
+        .back {
+            display: block;
+            margin-top: 20px;
+            color: #5a3827;
+            text-align: center;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo">✦</div>
+
+        <h1>Museum Ganesya</h1>
+
+        <p class="subtitle">
+            Silakan login untuk menambahkan koleksi museum.
+        </p>
+
+        <form action="login.php" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Masukkan username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Masukkan password"
+                    required
+                >
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <a href="katalog.html" class="back">
+            ← Kembali ke Katalog
+        </a>
+    </div>
+</body>
+</html>
